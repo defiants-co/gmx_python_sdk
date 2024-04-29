@@ -161,7 +161,7 @@ class Config:
             return self.skeleton
 
     def set_config(self, config):
-        print(f"Setting config file: '{self.file_path}'")
+        # print(f"Setting config file: '{self.file_path}'")
         with open(self.file_path, 'w') as file:
             yaml.dump(config, file)
 
