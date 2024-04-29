@@ -23,12 +23,12 @@ namespaces = false
 
 [tool.poetry.dependencies]
 python = ">= 3.10.4"
-numpy = ">= 1.26.3"
-hexbytes = ">= 0.3.1"
-web3 = ">= 6.10.0"
-pyyaml = ">= 6.0.1"
-pandas = ">= 1.4.2"
-numerize = ">= 0.12"
+numpy = "*"
+hexbytes = "*"
+web3 = "*"
+pyyaml = "*"
+pandas = "*"
+numerize = "*"
 
 [build-system]
 requires = ["poetry-core"]
