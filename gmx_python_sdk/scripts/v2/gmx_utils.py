@@ -155,9 +155,6 @@ class Config:
             )
             return self.test_config_format(config)
         except FileNotFoundError:
-            print(
-                f"Config file '{self.file_path}' not found.\nLoading blank template!"
-            )
             return self.skeleton
 
     def set_config(self, config):
@@ -191,21 +188,6 @@ class Config:
 
 def get_config(filepath: str = os.path.join(base_dir, "config.yaml")):
     config = Config(filepath).load_config()
-    # print('config')
-    # from pprint import pprint
-    # pprint(config)
-
-    if config['private_key'] is None:
-        logging.warning("Private key not set!")
-
-    if config['arbitrum']['rpc'] is None:
-        logging.warning("Arbitrum RPC not set!")
-
-    if config['avalanche']['rpc'] is None:
-        logging.warning("Avalanche RPC not set!")
-
-    if config['user_wallet_address'] is None:
-        logging.warning("Wallet address not set!")
 
     return config
 
@@ -343,10 +325,8 @@ def get_tokens_address_dict(chain: str):
 
             # Parse the JSON response
             token_infos = response.json()['tokens']
-        else:
-            print(f"Error: {response.status_code}")
     except requests.RequestException as e:
-        print(f"Error: {e}")
+        pass
 
     token_address_dict = {}
 
