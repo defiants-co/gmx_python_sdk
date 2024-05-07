@@ -224,7 +224,7 @@ def check_if_viable_farming_strategy(parameters: dict, ignore_oi_imbalance=False
             stats["net_rate_per_hour"], parameters["net_rate_threshold"]
         ))
     usd_earning_per_hour = numerize.numerize(stats["net_rate_per_hour"] / 100 * position_size_usd)
-    print("\n\nPosition viable, and will net ${} per hour.".format(usd_earning_per_hour))
+    # print("\n\nPosition viable, and will net ${} per hour.".format(usd_earning_per_hour))
     return stats
 
 

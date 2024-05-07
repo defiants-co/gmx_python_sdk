@@ -37,13 +37,6 @@ class GetOpenPositions:
         address = convert_to_checksum_address(self.chain, address)
 
         raw_positions = self. _query_for_positions(address)
-        if len(raw_positions) == 0:
-            logging.info(
-                'No positions open for address: "{}"" on {}.'.format(
-                    address,
-                    self.chain.title()
-                )
-            )
         processed_positions = {}
 
         for raw_position in raw_positions:

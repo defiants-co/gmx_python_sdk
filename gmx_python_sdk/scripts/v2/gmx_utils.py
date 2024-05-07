@@ -20,12 +20,12 @@ base_dir = os.path.abspath(
 package_dir = base_dir + '/gmx_python_sdk/'
 # print('base_dir', base_dir)
 
-logging.basicConfig(
-    format='{asctime} {levelname}: {message}',
-    datefmt='%m/%d/%Y %I:%M:%S %p',
-    style='{',
-    level=logging.INFO
-)
+# logging.basicConfig(
+#     format='{asctime} {levelname}: {message}',
+#     datefmt='%m/%d/%Y %I:%M:%S %p',
+#     style='{',
+#     level=logging.INFO
+# )
 
 
 # Functions required for multithreading

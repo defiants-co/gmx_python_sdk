@@ -40,10 +40,10 @@ def get_positions(chain: str, address: str = None):
 
     positions = GetOpenPositions(chain=chain, address=address).get_data()
 
-    if len(positions) > 0:
-        print("Open Positions for {}:".format(address))
-        for key in positions.keys():
-            print(key)
+    # if len(positions) > 0:
+    #     print("Open Positions for {}:".format(address))
+    #     for key in positions.keys():
+    #         print(key)
 
     return positions
 

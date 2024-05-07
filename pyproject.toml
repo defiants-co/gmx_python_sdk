@@ -29,6 +29,7 @@ web3 = "*"
 pyyaml = "*"
 pandas = "*"
 numerize = "*"
+eth-abi = "*"
 
 [build-system]
 requires = ["poetry-core"]

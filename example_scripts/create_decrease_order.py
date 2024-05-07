@@ -34,8 +34,6 @@ parameters = {
 order_parameters = OrderArgumentParser(
     is_decrease=True).process_parameters_dictionary(parameters)
 
-print(order_parameters)
-
 order = DecreaseOrder(
     chain=order_parameters['chain'],
     market_key=order_parameters['market_key'],
